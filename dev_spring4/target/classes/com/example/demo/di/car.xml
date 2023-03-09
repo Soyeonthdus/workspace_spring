@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="himCar" class="com.example.demo.di.Sonata" /> <!-- 소나타의 디폴트 생성자 -->
+	<bean id="herCar" class="com.example.demo.di.Sonata" /> <!-- 소나타의 디폴트 생성자 -->
+	<bean id="yourCar" class="com.example.demo.di.Sonata"> <!-- 소나타생성자에 값을 넣어줌 -->
+			<constructor-arg index="0" type="int" value="50" />
+			<constructor-arg index="1" type="java.lang.String" value="2023년형 소나타" />
+			<constructor-arg index="2" type="int" value="4" />
+	</bean>
+</beans>
